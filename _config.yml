@@ -7,7 +7,7 @@
 # Copyright © Lezar by robert_biswas. All Rights Reserved.
 #
 # ----------------------------------------------------
-title: U. L. Studio - Beauty Salon
+title: Lezar - Beauty Salon and Spa Jekyll Theme
 theme_version: 1.0.0
 baseurl: '' # the subpath or subdomain of your site, e.g. /blog
 url: '' # the base hostname & protocol for your site, e.g. http://yourdomain.com
@@ -44,6 +44,6 @@ plugins:
 
 # Author Bio to show in Blog Sidebar
 author_bio:
-  name: "Ulyana Lalak"
+  name: "Robert Biswas"
   image: "assets/images/widgets/about-author.jpg"
-  desc: "My description"
+  desc: "On the other hand, we denounce with righteous indignation and dislike men who beguiled"
