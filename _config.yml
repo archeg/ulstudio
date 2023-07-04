@@ -9,6 +9,7 @@
 # ----------------------------------------------------
 title: U. L. Studio - Beauty Salon
 theme_version: 1.0.0
+remote_theme: pages-themes/minimal@v0.2.0
 #baseurl: '' # the subpath or subdomain of your site, e.g. /blog
 #url: '' # the base hostname & protocol for your site, e.g. http://yourdomain.com
 
@@ -36,6 +37,7 @@ jekyll-archives:
 markdown: kramdown
 # Build settings
 plugins:
+  - jekyll-remote-theme
   - jekyll-archives
   - jekyll-paginate
   - jekyll-feed
