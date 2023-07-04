@@ -10,4 +10,4 @@ gem "jekyll-seo-tag"
 gem 'webrick'
 gem 'rack'
 gem 'jekyll-coffeescript'
-gem "github-pages", "202"
+gem "jekyll-remote-theme"
