@@ -9,7 +9,6 @@
 # ----------------------------------------------------
 title: Lezar - Beauty Salon and Spa Jekyll Theme
 theme_version: 1.0.0
-remote_theme: benbalter/retlab
 baseurl: '' # the subpath or subdomain of your site, e.g. /blog
 url: '' # the base hostname & protocol for your site, e.g. http://yourdomain.com
 
@@ -42,7 +41,6 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-coffeescript
-  - jekyll-remote-theme
 
 # Author Bio to show in Blog Sidebar
 author_bio:
