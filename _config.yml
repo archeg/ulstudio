@@ -1,0 +1,49 @@
+# ----------------------------------------------------
+# Name: Lezar - Beauty Salon & Spa Jekyll Theme
+# Version: 1.0
+# Author: Robert_Biswas
+# Author URL: 'https://themeforest.net/user/robert_biswas'
+# Demo URL: 'https://preview.robertbiswas.com/jekyll/lezar/'
+# Copyright © Lezar by robert_biswas. All Rights Reserved.
+#
+# ----------------------------------------------------
+title: U. L. Studio - Beauty Salon
+theme_version: 1.0.0
+baseurl: '' # the subpath or subdomain of your site, e.g. /blog
+url: '' # the base hostname & protocol for your site, e.g. http://yourdomain.com
+
+# paginations & permalinks
+paginate: 5
+paginate_path: "/blog/page:num/"
+permalink: pretty
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# archives
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layouts:
+    category: archive
+    tag: archive
+  permalinks:
+    category: /categories/:name/
+    tag: /tags/:name/
+
+markdown: kramdown
+# Build settings
+plugins:
+  - jekyll-archives
+  - jekyll-paginate
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-coffeescript
+
+# Author Bio to show in Blog Sidebar
+author_bio:
+  name: "Ulyana Lalak"
+  image: "assets/images/widgets/about-author.jpg"
+  desc: "My description"

@@ -1,0 +1,57 @@
+---
+layout: default
+banner-bg-text: "Blog"
+title: "Lezar Blog"
+page-banner: true
+banner-image: 'assets/images/banners/blog-banner.jpg'
+---
+{% include title-banner.html %}
+
+<section class="blog-list-area py-150 rpy-100">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8">
+				<div class="blog-list-items-wrap">
+				{% for post in paginator.posts %}
+				   {% include post-excerpt.html %}
+				{% endfor %}
+				{% if paginator.total_pages > 1 %}
+					<nav aria-label="...">
+						<ul class="pagination flex-wrap pt-25 wow fadeInUp delay-0-4s">
+							{% if paginator.previous_page %}
+							<li class="page-item">
+								<a class="page-link" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"><i class="fas fa-arrow-left"></i></a>
+							</li>
+							{% endif %}
+							{% for page in (1..paginator.total_pages) %}
+							{% if page == paginator.page %}
+							<li class="page-item active">
+								<span class="page-link">
+									{{page}}
+									<span class="sr-only">(current)</span>
+								</span>
+							</li>
+                            
+							{% elsif page == 1 %}
+							<li class="page-item"><a class="page-link" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{page}}</a></li>
+							{% else %}
+							<li class="page-item"><a class="page-link" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{page}}</a></li>
+							{% endif %}
+							{% endfor %}
+							{% if paginator.next_page %}
+							<li class="page-item">
+								<a class="page-link" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"><i class="fas fa-arrow-right"></i></a>
+							</li>
+							{% endif %}
+						</ul>
+					</nav>
+				{% endif %}
+					
+				</div>
+			</div>
+			<div class="col-lg-4">
+				{% include blog-sidebar.html %}
+			</div>
+		</div>
+	</div>
+</section>

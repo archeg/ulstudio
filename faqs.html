@@ -1,0 +1,33 @@
+---
+layout: page
+title: FAQs
+parent: Home
+parent-url: /
+page-banner: true
+banner-image: 'assets/images/banners/faq-banner.jpg'
+banner-bg-text: FAQs
+banner-text-center: true
+---
+
+<section class="faq-page pt-140 pb-150 rpt-90 rpb-100" id="faq-accordion">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6">
+				<div class="faq-content wow fadeInLeft delay-0-2s">
+					{% include section-title.html bg-text="faqs" sub-title="Asked Questions" title="Have Any Questions On Minds! Take a Look Company Faqs" %}
+					{% include widget-faq-accordion.html id="left" %}
+				</div>
+			</div>
+			<div class="col-lg-6">
+				<div class="faq-content rmt-55 wow fadeInRight delay-0-2s">
+					<p>Sed perspiciatis unde omnis natus error voluptatem accusantium doloremque laudantium totam aperiam eaque ipsa quillo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur</p>
+					<h6>Inventore veritatis et quasi architecto beatae vitae dic explicabo. Nemo enim ipsam voluptatem voluptas  aspernatur</h6>
+					{% include widget-faq-accordion.html extra-class="mt-65" %}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- FAQ Page End -->
+{% include section-video.html bg-image="assets/images/video/video-bg.jpg" youtube-video="https://www.youtube.com/watch?v=9Y7ma241N8k"%}
+{% include section-contact-form.html %}

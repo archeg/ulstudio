@@ -1,0 +1,56 @@
+---
+layout: default
+---
+{% include title-banner-post.html %}
+
+<!-- Blog Details Start -->
+<section class="blog-details-area py-150 rpy-100">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8">
+			   <div class="blog-list-item blog-details-content">
+					<div class="image wow fadeInUp delay-0-2s">
+						<img src="{{ page.image | relative_url }}" alt="blog">
+					</div>
+					<div class="blog-list-content wow fadeInUp delay-0-4s">
+						<ul>
+							<li><i class="far fa-calendar-alt"></i>{{ page.date | date_to_string }}</li>
+							<li class="meta-tags"><i class="fas fa-tags"></i>
+							 {% for tag in page.tags limit:5 %}
+							 <a href="{{ '/tags' | relative_url }}/{{ tag | downcase | url_escape | strip | replace: ' ', '-' }}" rel="tag">{{ tag }}</a>{% if forloop.last != true %}, {% endif %} 
+							 {% endfor %}
+							 </li>
+						</ul>
+						{{ content }}
+						<hr class="mt-40">
+						<div class="tag-share py-20 wow fadeInUp delay-0-2s">
+							<div class="tags mb-5">
+							   <h5>Post Tags : </h5>
+							   {% for tag in page.tags  %}
+							   <a href="{{ '/tags' | relative_url }}/{{ tag | downcase | url_escape | strip | replace: ' ', '-' }}" rel="tag">{{ tag }}</a> 
+							   {% endfor %}
+							</div>
+							<div class="share">
+								<h5>Share Now : </h5>
+								<div class="social-style-three">
+									{% assign post_url = page.url | absolute_url %}
+									<a href="https://www.facebook.com/sharer/sharer.php?u={{post_url}}" target="_blank"><i class="fab fa-facebook-f"></i></a>
+									<a href="https://twitter.com/intent/tweet?url={{post_url}}&text={{page.title}}" target="_blank"><i class="fab fa-twitter"></i></a>
+									<a href="https://www.linkedin.com/shareArticle?mini=true&url={{post_url}}" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+								</div>
+							</div>
+						</div>
+						<hr>
+						<h3 class="comments-title mt-40">Comments</h3>
+						{% include disqus-comment.html %}
+					</div>
+				</div>
+				
+			</div>
+			<div class="col-lg-4">
+				{% include blog-sidebar.html %}
+			</div>
+		</div>
+	</div>
+</section>
+<!-- Blog Details End -->
