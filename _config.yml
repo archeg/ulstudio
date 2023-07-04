@@ -9,6 +9,7 @@
 # ----------------------------------------------------
 title: U. L. Studio - Beauty Salon
 theme_version: 1.0.0
+theme: minima
 baseurl: '' # the subpath or subdomain of your site, e.g. /blog
 url: '' # the base hostname & protocol for your site, e.g. http://yourdomain.com
 
