@@ -1,0 +1,1 @@
+bundle install&bundle exec jekyll serve --livereload --incremental --config _config.yml,_config_local.yml
